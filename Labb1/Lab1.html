@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript för webbutveckling (ISGB15) 5hp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="jumbotron text-center">
+      <h1>Laboration 1</h1>
+    </div>
+
+    <div class="container-fluid">
+
+      <p class="h4">Lösningen skapad av [Anton Sjögren].</p>
+      <div class="table-responsive">
+
+        <script type="text/javascript">
+          var numbers = Array.from({length: 100}, () => Math.floor((Math.random() * 1000) +1));
+          numbers.sort(function(a, b){return a-b});
+        
+          document.write('<table class="table table-bordered table-responsive text-center">');
+
+            for(var row=0; row<10;row++)
+            {
+              document.write("<tr>");
+
+              for(var col=0; col<10; col++)
+              {
+                document.write("<td>");
+                document.write(numbers[col+(row*10)]);
+                document.write("</td>");
+              }
+
+              document.write("</tr>")
+            }
+            document.write("</table>");
+        </script>
+
+      </div>
+      <a href="" class="btn btn-primary" role="button">Kör igen</a>
+    </div>
+
+  </body>
+</html>
