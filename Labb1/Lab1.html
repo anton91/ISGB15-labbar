@@ -14,10 +14,13 @@
 
     <div class="container-fluid">
 
-      <p class="h4">Lösningen skapad av [Anton Sjögren].</p>
+      <p class="h4">Lösningen skapad av [Anton Sjögren & Nikita Johansson].</p>
       <div class="table-responsive">
 
         <script type="text/javascript">
+
+          'use strict';
+          
           var numbers = Array.from({length: 100}, () => Math.floor((Math.random() * 1000) +1));
           numbers.sort(function(a, b){return a-b});
         
@@ -29,14 +32,12 @@
 
               for(var col=0; col<10; col++)
               {
-                document.write("<td>");
-                document.write(numbers[col+(row*10)]);
-                document.write("</td>");
+                document.writeln("<td>" + numbers[col+(row*10)] + "</td>");
               }
-
               document.write("</tr>")
             }
-            document.write("</table>");
+
+          document.write("</table>");
         </script>
 
       </div>
